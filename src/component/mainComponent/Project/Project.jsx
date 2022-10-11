@@ -19,31 +19,31 @@ function Project() {
 
   const onHandleScroll = () => {
     if (10 < window.pageYOffset) {
-      if (500 < window.pageYOffset) {
+      if (732.8 < window.pageYOffset) {
         setIndexNum(index.pg);
       }
       setIndexNum(index.pg);
     }
-    if (500 < window.pageYOffset) {
-      if (1000 < window.pageYOffset) {
+    if (732.8 < window.pageYOffset) {
+      if (732.8 * 2 < window.pageYOffset) {
         setIndexNum(index.port);
       }
       setIndexNum(index.port);
     }
-    if (1000 < window.pageYOffset) {
-      if (1500 < window.pageYOffset) {
+    if (732.8 * 2 < window.pageYOffset) {
+      if (732.8 * 3 < window.pageYOffset) {
         setIndexNum(index.web);
       }
       setIndexNum(index.web);
     }
-    if (1500 < window.pageYOffset) {
-      if (2000 < window.pageYOffset) {
+    if (732.8 * 3 < window.pageYOffset) {
+      if (732.8 * 4 < window.pageYOffset) {
         setIndexNum(index.b2b);
       }
       setIndexNum(index.b2b);
     }
-    if (2000 < window.pageYOffset) {
-      if (2500 < window.pageYOffset) {
+    if (732.8 * 4 < window.pageYOffset) {
+      if (732.8 * 5 < window.pageYOffset) {
         setIndexNum(index.se);
       }
       setIndexNum(index.se);

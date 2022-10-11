@@ -15,21 +15,31 @@ function Menu() {
       <Link
         className={`nav ${current === pageIndex.current_intro ? "active" : ""}`}
         to={pageIndex.current_intro}
-      />
+      >
+        ABOUT ME
+      </Link>
       <Link
-        className={`nav ${current === pageIndex.current_skils ? "active" : ""}`}
-        to={pageIndex.current_skils}
-      />
+        className={`nav ${
+          current === pageIndex.current_skills ? "active" : ""
+        }`}
+        to={pageIndex.current_skills}
+      >
+        SKILLS
+      </Link>
       <Link
         className={`nav ${current === pageIndex.current_study ? "active" : ""}`}
         to={pageIndex.current_study}
-      />
+      >
+        STUDY
+      </Link>
       <Link
         className={`nav ${
           current === pageIndex.current_project ? "active" : ""
         }`}
         to={pageIndex.current_project}
-      />
+      >
+        PROJECT
+      </Link>
     </div>
   );
 }

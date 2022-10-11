@@ -84,7 +84,7 @@
       .skills-image {
         width: 321.15px;
         height: 595px;
-        @include bgOption("../../../style/image/skils1.png");
+        @include bgOption("../../../style/image/skills1.png");
         background-position: 0 -50px;
       }
     }
@@ -97,7 +97,7 @@
       .skills-image {
         width: 91px;
         height: 302px;
-        @include bgOption("../../../style/image/skils2.png");
+        @include bgOption("../../../style/image/skills2.png");
       }
     }
     .skills-3 {
@@ -109,7 +109,7 @@
       .skills-image {
         width: 97px;
         height: 198px;
-        @include bgOption("../../../style/image/skils3.png");
+        @include bgOption("../../../style/image/skills3.png");
       }
     }
   }

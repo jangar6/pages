@@ -4,9 +4,10 @@ import usePage from "../../../redux/store/hooks/usePage";
 import "./Skills.scss";
 
 function Skills() {
-  const { currentPageSkils } = usePage();
+  const { currentPageSkills } = usePage();
   useEffect(() => {
-    currentPageSkils();
+    window.scrollTo(0, 0);
+    currentPageSkills();
   }, []);
 
   return (
@@ -14,7 +15,7 @@ function Skills() {
       <Menu />
       <div className="text-box">
         <div className="title">
-          <p>SKILS</p>
+          <p>SKILLS</p>
         </div>
       </div>
       <div className="image-box">
