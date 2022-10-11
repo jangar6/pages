@@ -3,10 +3,8 @@ $activeColor: black;
 .menu {
   position: fixed;
   top: 3%;
-  left: 50%;
+  right: 3%;
   display: flex;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
   z-index: 999;
 
   .nav {

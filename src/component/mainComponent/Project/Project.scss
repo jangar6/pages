@@ -1,6 +1,7 @@
 @use "../../../style/mixin" as *;
 
 .project {
+  animation: ani-fadin 0.5s;
   .title {
     position: fixed;
     right: 150px;
