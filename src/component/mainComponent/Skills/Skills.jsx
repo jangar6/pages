@@ -18,6 +18,14 @@ function Skills() {
           <p>SKILLS</p>
         </div>
       </div>
+      <p className="desc">
+        개발자를 준비할 때 부터 1년 6개월 정도의 경력을 쌓으며 그동안 공부해온
+        기술들입니다. <em>React</em> 기반으로 프로젝트들을 진행하였으며 주요
+        기술은 <em>Javascript</em>와 <em>SASS</em> 입니다. 어떤 개발자분은
+        저에게 기술보다는 얼마나 코드를 이해하고 작성하는지가 더 중요하다
+        하셨습니다. 때문에 부족할지라도 기본만큼은 확실히 쌓은 저의 기술들만
+        정리해보았습니다.
+      </p>
       <div className="image-box">
         <div className="sklis-1">
           <p className="sklis">FrontEnd</p>

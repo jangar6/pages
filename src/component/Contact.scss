@@ -19,6 +19,8 @@
   width: 110px;
   height: 30px;
   z-index: 500;
+  transform-origin: center;
+
   &.open {
     .box {
       opacity: 1;
@@ -55,10 +57,32 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    font-family: "NanumBarunpen";
-    font-style: italic;
-    font-weight: 800;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Paytone One";
+    // font-family: "NanumBarunpen";
     font-size: 2.2vmin;
     color: white;
+
+    background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 180px;
   }
 }

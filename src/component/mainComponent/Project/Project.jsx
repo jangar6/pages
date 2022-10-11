@@ -140,11 +140,18 @@ function Project() {
             cont_6={
               <div>
                 <a
-                  href="https://github.com/jangar6/port2022"
+                  href="https://jangar6.github.io/pages"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   PORTFOLIO SITE
+                </a>
+                <a
+                  href="https://github.com/jangar6/port2022"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PORTFOLIO GITHUB
                 </a>
               </div>
             }
@@ -290,7 +297,7 @@ function Project() {
               <p>
                 1명
                 <br />
-                95%
+                100%
               </p>
             }
             cont_4={
@@ -323,7 +330,7 @@ function Project() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  SLIDE & EFFECT GITHUB
+                  SLIDE & MOUSE EFFECT GITHUB
                 </a>
               </div>
             }
