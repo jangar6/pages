@@ -5,51 +5,66 @@ import Menu from "../../Menu";
 import "./Project.scss";
 
 const index = {
-  pg: 0,
-  port: 1,
-  web: 2,
-  b2b: 3,
-  se: 4,
+  port: 0, // portfolio
+  pg: 1, // pick and go
+  rb: 2, // rankingball
+  b2b: 3, // b2b site
+  web: 4, // web standard - 3
+  se: 5, // effect - 2
 };
 
 function Project() {
   const { currentPageProject } = usePage();
 
-  const [indexNum, setIndexNum] = useState(index.pg);
+  const [indexNum, setIndexNum] = useState(index.port);
+
+  const pageScrollValue = 763;
 
   const onHandleScroll = () => {
     if (10 < window.pageYOffset) {
-      if (732.8 < window.pageYOffset) {
-        setIndexNum(index.pg);
-      }
-      setIndexNum(index.pg);
-    }
-    if (732.8 < window.pageYOffset) {
-      if (732.8 * 2 < window.pageYOffset) {
+      if (pageScrollValue < window.pageYOffset) {
         setIndexNum(index.port);
       }
       setIndexNum(index.port);
     }
-    if (732.8 * 2 < window.pageYOffset) {
-      if (732.8 * 3 < window.pageYOffset) {
-        setIndexNum(index.web);
+
+    if (pageScrollValue < window.pageYOffset) {
+      if (pageScrollValue * 2 < window.pageYOffset) {
+        setIndexNum(index.pg);
       }
-      setIndexNum(index.web);
+      setIndexNum(index.pg);
     }
-    if (732.8 * 3 < window.pageYOffset) {
-      if (732.8 * 4 < window.pageYOffset) {
+
+    if (pageScrollValue * 2 < window.pageYOffset) {
+      if (pageScrollValue * 3 < window.pageYOffset) {
+        setIndexNum(index.rb);
+      }
+      setIndexNum(index.rb);
+    }
+
+    if (pageScrollValue * 3 < window.pageYOffset) {
+      if (pageScrollValue * 4 < window.pageYOffset) {
         setIndexNum(index.b2b);
       }
       setIndexNum(index.b2b);
     }
-    if (732.8 * 4 < window.pageYOffset) {
-      if (732.8 * 5 < window.pageYOffset) {
+
+    if (pageScrollValue * 4 < window.pageYOffset) {
+      if (pageScrollValue * 5 < window.pageYOffset) {
+        setIndexNum(index.web);
+      }
+      setIndexNum(index.web);
+    }
+
+    if (pageScrollValue * 5 < window.pageYOffset) {
+      if (pageScrollValue * 6 < window.pageYOffset) {
         setIndexNum(index.se);
       }
       setIndexNum(index.se);
     }
+
     if (window.pageYOffset === 0) {
-      setIndexNum(index.pg);
+      setIndexNum(index.port);
     }
   };
 
@@ -70,49 +85,9 @@ function Project() {
     <div className="project">
       <Menu />
 
-      {/* pickandgo */}
-      <div className={`column-1 ${indexNum === index.pg ? " active" : ""}`}>
-        <p className="title">PROJECT01</p>
-        <div className="contents">
-          <ProjectRefo
-            imageClass={"pickgo"}
-            desc={
-              "‘twitch’라는 플랫폼에서 진행되는 ‘League of Legends’게임 중계 방송에서 twitch extension을 사용하여 코드르 띄우는 방식입니다. 간단한 빙고게임과 실시간 게임정보를 업데이트하여 차트로 시각화하여 보여주어 시청하는 고객에게 재미를 더해주는 컨텐츠 입니다."
-            }
-            cont_1={"21.03 ~ 22.08 (계속 진행)"}
-            cont_2={"React, GitLab, Javascript, SASS, Webpack ..."}
-            cont_3={
-              <p>
-                1 ~ 3명 (시기에 따라 조정)
-                <br /> 70%
-              </p>
-            }
-            cont_4={
-              <p>
-                웹 개발 및 퍼블리싱 <br /> 리팩토링 후 퍼블 수정 <br /> 모바일
-                코드 수정 <br /> 새로운 차트 기능 추가
-              </p>
-            }
-            cont_5={
-              "공통 모듈 사용으로 코드 간소화, 모바일 출시 기존에 없던 새로운 차트 개발"
-            }
-            cont_6={
-              <a
-                href="https://www.youtube.com/watch?v=s4VpFxbw8M0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GIUDE YOUTUBE
-              </a>
-            }
-          />
-        </div>
-        <p className="sub-title">PICK & GO</p>
-      </div>
-
       {/* POLT */}
-      <div className={`column-2 ${indexNum === index.port ? "active" : ""}`}>
-        <p className="title">PROJECT02</p>
+      <div className={`column-1 ${indexNum === index.port ? "active" : ""}`}>
+        <p className="title">PROJECT01</p>
         <div className="contents">
           <ProjectRefo
             imageClass={"port"}
@@ -160,9 +135,134 @@ function Project() {
         <p className="sub-title">PORTFOLIO SITE</p>
       </div>
 
-      {/* webSite */}
-      <div className={`column-3 ${indexNum === index.web ? "active" : ""}`}>
+      {/* pickandgo */}
+      <div className={`column-2 ${indexNum === index.pg ? " active" : ""}`}>
+        <p className="title">PROJECT02</p>
+        <div className="contents">
+          <ProjectRefo
+            imageClass={"pickgo"}
+            desc={
+              "‘twitch’라는 플랫폼에서 진행되는 ‘League of Legends’게임 중계 방송에서 twitch extension을 사용하여 코드르 띄우는 방식입니다. 간단한 빙고게임과 실시간 게임정보를 업데이트하여 차트로 시각화하여 보여주어 시청하는 고객에게 재미를 더해주는 컨텐츠 입니다."
+            }
+            cont_1={"21.03 ~ 22.08 (계속 진행)"}
+            cont_2={"React, GitLab, Javascript, SASS, Webpack ..."}
+            cont_3={
+              <p>
+                1 ~ 3명 (시기에 따라 조정)
+                <br /> 70%
+              </p>
+            }
+            cont_4={
+              <p>
+                웹 개발 및 퍼블리싱 <br /> 리팩토링 후 퍼블 수정 <br /> 모바일
+                코드 수정 <br /> 새로운 차트 기능 추가
+              </p>
+            }
+            cont_5={
+              "공통 모듈 사용으로 코드 간소화, 모바일 출시 기존에 없던 새로운 차트 개발"
+            }
+            cont_6={
+              <a
+                href="https://www.youtube.com/watch?v=s4VpFxbw8M0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GIUDE YOUTUBE
+              </a>
+            }
+          />
+        </div>
+        <p className="sub-title">PICK & GO</p>
+      </div>
+
+      {/* RankingBall */}
+      <div className={`column-3 ${indexNum === index.rb ? " active" : ""}`}>
         <p className="title">PROJECT03</p>
+        <div className="contents">
+          <ProjectRefo
+            imageClass={"rank"}
+            desc={
+              "아레나캐스트 회사에서는 다양한 e-sports게임과 관련한 컨텐츠들을 제작하였으며 해당 프로젝트는 그 컨텐츠들에 사용되는 카드로 카드의 파츠들을 구성하고 사용하는등의 목적을 위하여 거래 사이트를 제작한 것입니다."
+            }
+            cont_1={"22.05 ~ 22.05"}
+            cont_2={"Next, React, GitLab, Javascript, SASS, Webpack ..."}
+            cont_3={
+              <p>
+                2명
+                <br />
+                65%
+              </p>
+            }
+            cont_4={
+              <p>
+                UI/UX를 작업하였으며 슬라이드, 메뉴, 페이지 전환 등의 기능이나
+                반응형하였습니다.
+              </p>
+            }
+            cont_5={
+              "Next를 사용하여 작업하였으며 이 외에 클래스네임 모듈화, 컴포넌트 분류 방법등 다양한 기술을 사용해보며 제작한 사이트로 같이 참여한 개발자와 부족한 부분들을 공부하며 개발 지식을 쌓는데 도움이 되었습니다. 해당 사이트는 아직 미완성임에도 불구하고 접속률이 4.4%를 기록하였습니다."
+            }
+            cont_6={
+              <a
+                href="https://store.rankingball.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WEB STORE SITE
+              </a>
+            }
+          />
+        </div>
+        <p className="sub-title">WEB STORE - RANKINGBALL</p>
+      </div>
+
+      {/* b2b */}
+      <div className={`column-4 ${indexNum === index.b2b ? "active" : ""}`}>
+        <p className="title">PROJECT04</p>
+        <div className="contents">
+          <ProjectRefo
+            imageClass={"b2b"}
+            desc={
+              "유저 b2b 사이트를 제작하였습니다. 경기정보나 새로운 소식도 얻을 수 있으며 경험치를 얻어 그에 대한 보상까지 지급하는 사이트로 회사만의 거래사이트로 볼 수 있습니다."
+            }
+            cont_1={"22.05 ~ 22.05"}
+            cont_2={"javascript, sass, gitLab"}
+            cont_3={
+              <p>
+                1명
+                <br />
+                95%
+              </p>
+            }
+            cont_4={
+              <p>
+                SASS를 사용하요 퍼블 위주로 작업하였으며 라우터를 사용하여
+                페이지 전환을 하며 클릭하면 고정이 되는 탭메뉴나 슬라이드 등
+                다양한 기능을 개발하였습니다.
+              </p>
+            }
+            cont_5={
+              "회사내에서 공통으로 사용하는 모듈을 제외한 모든 뼈대를 잡는 작업을 하였으며 다른 업무와 시기가 겹쳐 정식 출시는 되지 못하였습니다."
+            }
+            cont_6={
+              <div>
+                <a
+                  href="https://github.com/jangar6/ac.b2b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  USER B2B WEB SITE GITHUB
+                </a>
+              </div>
+            }
+          />
+        </div>
+        <p className="sub-title">USER B2B WEB SITE</p>
+      </div>
+
+      {/* webSite */}
+      <div className={`column-5 ${indexNum === index.web ? "active" : ""}`}>
+        <p className="title">PROJECT05</p>
         <div className="contents">
           <ProjectRefo
             imageClass={"web"}
@@ -238,53 +338,9 @@ function Project() {
         <p className="sub-title">WEB RESPONSIVE & STANDARD</p>
       </div>
 
-      {/* b2b */}
-      <div className={`column-4 ${indexNum === index.b2b ? "active" : ""}`}>
-        <p className="title">PROJECT04</p>
-        <div className="contents">
-          <ProjectRefo
-            imageClass={"b2b"}
-            desc={
-              "유저 b2b 사이트를 제작하였습니다. 경기정보나 새로운 소식도 얻을 수 있으며 경험치를 얻어 그에 대한 보상까지 지급하는 사이트로 회사만의 거래사이트로 볼 수 있습니다."
-            }
-            cont_1={"22.05 ~ 22.05"}
-            cont_2={"javascript, sass, gitLab"}
-            cont_3={
-              <p>
-                1명
-                <br />
-                95%
-              </p>
-            }
-            cont_4={
-              <p>
-                SASS를 사용하요 퍼블 위주로 작업하였으며 라우터를 사용하여
-                페이지 전환을 하며 클릭하면 고정이 되는 탭메뉴나 슬라이드 등
-                다양한 기능을 개발하였습니다.
-              </p>
-            }
-            cont_5={
-              "회사내에서 공통으로 사용하는 모듈을 제외한 모든 뼈대를 잡는 작업을 하였으며 다른 업무와 시기가 겹쳐 정식 출시는 되지 못하였습니다."
-            }
-            cont_6={
-              <div>
-                <a
-                  href="https://github.com/jangar6/ac.b2b"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  USER B2B WEB SITE GITHUB
-                </a>
-              </div>
-            }
-          />
-        </div>
-        <p className="sub-title">USER B2B WEB SITE</p>
-      </div>
-
       {/* SLIDE & EFFECT */}
-      <div className={`column-5 ${indexNum === index.se ? "active" : ""}`}>
-        <p className="title">PROJECT05</p>
+      <div className={`column-6 ${indexNum === index.se ? "active" : ""}`}>
+        <p className="title">PROJECT06</p>
         <div className="contents">
           <ProjectRefo
             imageClass={"effect"}
