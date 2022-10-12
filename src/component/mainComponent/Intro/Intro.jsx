@@ -24,7 +24,7 @@ function Intro() {
         <div className="text-box">
           <p className="icon">“</p>
           <div className="text">
-            <p>단순 사이트 제작뿐만 아니라 기능과 게임 콘텐츠까지,</p>
+            <p>단순 사이트 제작뿐만 아니라 기능과 콘텐츠까지,</p>
             <p>퍼블리싱과 웹 개발을 같이하는 개발자입니다.</p>
           </div>
           <p className="icon">”</p>
