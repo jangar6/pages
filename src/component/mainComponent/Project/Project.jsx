@@ -92,7 +92,7 @@ function Project() {
           <ProjectRefo
             imageClass={"port"}
             desc={
-              '해당 프로젝트는 사실 SASS나 CSS를 사용할때 다른파일에서 서로 다른 파일을 import했을때 클레스네임이 겹치는 경우 UI/UX구조가 충돌나는 경우를 대비하기 위해 홀로 공부하던 내용을 기반으로 작성하였습니다. 때문에 클래스네임을 모듈화 하였고 기존 사용방법인 "className"이 아닌 "className"으로 사용합니다. 자세한 사용방법은 참고URL의 github를 확인해주세요. '
+              '해당 프로젝트는 사실 SASS나 CSS를 사용할때 다른파일에서 서로 다른 파일을 import했을때 클레스네임이 겹치는 경우 UI/UX구조가 충돌나는 경우를 대비하기 위해 홀로 공부하던 내용을 기반으로 작성하였습니다. 때문에 클래스네임을 모듈화 하였고 기존 사용방법인 "className"이 아닌 "styleName"으로 사용합니다. 자세한 사용방법은 참고URL의 github를 확인해주세요. '
             }
             cont_1={"20.11 ~ 21.01"}
             cont_2={"React, Javascript, SASS, Webpack, Git..."}
